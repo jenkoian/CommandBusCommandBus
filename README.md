@@ -15,6 +15,7 @@ Usage
 
 Say you have a controller (or whatever) that looks something like
 
+```php
 <?php
 
 namespace Acme\Controller;
@@ -49,6 +50,7 @@ class MyController
         //...
     }
 }
+```
 
 Then depending on your method of DependencyInjection just inject the required adapter for the command bus you want to use.
 
