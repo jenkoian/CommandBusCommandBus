@@ -65,9 +65,9 @@ services:
             - @broadway.command_handling.simple_command_bus
 
     acme.my_controller:
-            class: Acme\Controller\MyController
-            arguments:
-                - @jenko.command_bus.broadway
+        class: Acme\Controller\MyController
+        arguments:
+            - @jenko.command_bus.broadway
 ````
 
 Disclaimer
