@@ -12,14 +12,14 @@ class SimpleBusCommandBusAdapterTest extends \PHPUnit_Framework_TestCase
     {
         $command = $this->mockCommand();
 
-        $mockTacticianCommandBus = $this->mockCommandBus();
-        $mockTacticianCommandBus
+        $mockSimpleBusCommandBus = $this->mockCommandBus();
+        $mockSimpleBusCommandBus
             ->expects($this->once())
             ->method('handle')
             ->with($this->identicalTo($command))
         ;
 
-        $commandBus = new SimpleBusCommandBusAdapter($mockTacticianCommandBus);
+        $commandBus = new SimpleBusCommandBusAdapter($mockSimpleBusCommandBus);
 
         $commandBus->execute($command);
     }
